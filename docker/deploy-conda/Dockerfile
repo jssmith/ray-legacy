@@ -4,8 +4,8 @@
 FROM ubuntu:xenial
 RUN apt-get update
 RUN apt-get -y install apt-utils
+RUN apt-get -y install vim wget
 RUN apt-get -y install git cmake build-essential autoconf curl libtool libboost-all-dev unzip graphviz
-RUN apt-get install -y wget
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     wget --quiet https://repo.continuum.io/archive/Anaconda2-4.1.1-Linux-x86_64.sh -O /tmp/anaconda.sh && \
     /bin/bash /tmp/anaconda.sh -b -p /opt/conda && \
