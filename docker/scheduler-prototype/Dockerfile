@@ -18,4 +18,6 @@ RUN wget -nv https://github.com/google/or-tools/releases/download/v5.0/or-tools_
     rm -rf ortools_examples or-tools_python_examples_v5.0.3919.tar.gz
 WORKDIR /
 
+RUN pip install awscli
+
 RUN git clone https://github.com/jssmith/ray-scheduler-prototype scheduler-prototype
